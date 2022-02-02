@@ -2,15 +2,23 @@
 public class AdvancedAstrology {
 
     public static void printStars(int number) {
-        // part 1 of the exercise
+        for (int i = 0; i < number; ++i) {
+            System.out.print("*");
+        }
+        System.out.println();
     }
 
     public static void printSpaces(int number) {
-        // part 1 of the exercise
+        for (int i = 0; i < number; ++i) {
+            System.out.print(" ");
+        }
     }
 
     public static void printTriangle(int size) {
-        // part 2 of the exercise
+        for (int i = size; i >= 0; --i) {
+            printStars(size-i);
+            printSpaces(i);
+        }
     }
 
     public static void christmasTree(int height) {
