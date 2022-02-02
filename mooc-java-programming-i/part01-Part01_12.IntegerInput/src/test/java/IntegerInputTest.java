@@ -35,7 +35,7 @@ public class IntegerInputTest {
             correctOutput("not a number");
             fail("The program must convert the given number to an integer. Currently there is no conversion.");
         } catch (NumberFormatException e) {
-
+		// Exception when not a number 
         }
 
     }
