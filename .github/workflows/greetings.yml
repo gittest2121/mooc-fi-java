@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Greetings 🎉. It is your first issue on this repository. ✅ Make sure to check latest changes whether the issue is still occuring.'
+        pr-message: 'Greetings 🎉. It is your first pull request on this repository. 🔃 Make sure your branch is up to date with main.'
