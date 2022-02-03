@@ -27,28 +27,19 @@ public class StarSign {
 
     public static void printSquare(int size) {
         for (int i = 0; i < size; ++i) {
-            for (int j = 0; j < size; ++j) {
-                System.out.print("*");
-            }
-            System.out.println();
+            printStars(size);
         }
     }
 
     public static void printRectangle(int width, int height) {
         for (int i = 0; i < height; ++i) {
-            for (int j = 0; j < width; ++j) {
-                System.out.print("*");
-            }
-            System.out.println();
+            printStars(width);
         }
     }
 
     public static void printTriangle(int size) {
-        for (int i = 0; i < size; ++i) {
-            for (int j = 0; j <= i; ++j) {
-                System.out.print("*");
-            }
-            System.out.println();
+        for (int i = 1; i <= size; ++i) {
+            printStars(i);
         }
     }
 }
