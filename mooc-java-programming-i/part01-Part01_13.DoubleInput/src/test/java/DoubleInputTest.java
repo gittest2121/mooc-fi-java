@@ -35,7 +35,7 @@ public class DoubleInputTest {
             correctOutput("this is not a number");
             fail("The program must convert the given number to a double. Currently there is no conversion.");
         } catch (NumberFormatException e) {
-
+		// Exception when not an number
         }
 
     }

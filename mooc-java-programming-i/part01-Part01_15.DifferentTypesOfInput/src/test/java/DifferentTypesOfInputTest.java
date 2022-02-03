@@ -35,6 +35,7 @@ public class DifferentTypesOfInputTest {
             correctOutput("Oobs!", "non-integer", "3200.1", "false");
             fail("The program must cast the given integer to a integer variable");
         } catch (NumberFormatException e) {
+		// Exception when non-integer input
         }
     }
     
@@ -44,6 +45,7 @@ public class DifferentTypesOfInputTest {
             correctOutput("Oobs!", "7", "non-double", "false");
             fail("The program must cast the given double to a double variable.");
         } catch (NumberFormatException e) {
+		// Exception when non-double input
         }
     }
 
