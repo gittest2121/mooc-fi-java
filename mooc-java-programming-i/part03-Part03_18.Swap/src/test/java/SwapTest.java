@@ -65,6 +65,7 @@ public class SwapTest {
                         Integer.valueOf(l.trim());
                         return true;
                     } catch (NumberFormatException t) {
+			    // NumberFormatException
                     }
                     return false;
                 }).map(i -> Integer.valueOf(i)).collect(Collectors.toList());
