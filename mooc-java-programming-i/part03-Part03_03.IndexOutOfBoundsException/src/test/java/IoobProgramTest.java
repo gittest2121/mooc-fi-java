@@ -12,6 +12,7 @@ public class IoobProgramTest {
             IoobProgram.main(new String[]{});
             fail("Execution of the program should cause an IndexOutOfBoundsException. Now it didn't happen.");
         } catch (IndexOutOfBoundsException e) {
+		// index mentioned is more than size
         }
     }
 }

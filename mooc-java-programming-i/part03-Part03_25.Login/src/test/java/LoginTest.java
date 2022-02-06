@@ -46,7 +46,7 @@ public class LoginTest {
 
         assertTrue("you're not printing anything!", out.length() > 0);
 
-        assertTrue("With username: \"" + k + "\" password: \"" + s + "\" you printed \"" + out + "\" while the output should have been \"You have successfully logged in!\". Remember that you can't compare strings with ==, but you need to use equals!", out.toLowerCase().contains("succ"));;
+        assertTrue("With username: \"" + k + "\" password: \"" + s + "\" you printed \"" + out + "\" while the output should have been \"You have successfully logged in!\". Remember that you can't compare strings with ==, but you need to use equals!", out.toLowerCase().contains("succ"));
         assertTrue("With username: \"" + k + "\" password: \"" + s + "\" you printed \"" + out + "\" while the output should have been \"You have successfully logged in!\". Remember that you can't compare strings with ==, but you need to use equals!", !out.toLowerCase().contains("orre"));
     }
 
