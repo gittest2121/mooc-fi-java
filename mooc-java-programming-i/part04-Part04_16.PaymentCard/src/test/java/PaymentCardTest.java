@@ -345,21 +345,21 @@ public class PaymentCardTest {
         String[] rows = io.getSysOut().split("\n");
         assertTrue("You are not printing anything", rows.length > 0);
         for (String row : rows) {
-            assertTrue("Print the owner of the card at the beginning of the row in addition to the card information! Remember to delete any extra code from the main program when doing the exercise 04-16.6", row.toLowerCase().contains("paul") || row.toLowerCase().contains("matt"));
-            assertFalse("Print only one card's information on a single row, now the following row is printed: " + row, row.toLowerCase().contains("paul") && row.toLowerCase().contains("matt"));
+            assertTrue("Print the owner of the card at the beginning of the row in addition to the card information! Remember to delete any extra code from the main program when doing the exercise 04-16.6", row.toLowerCase().contains("paulsCard") || row.toLowerCase().contains("matt"));
+            assertFalse("Print only one card's information on a single row, now the following row is printed: " + row, row.toLowerCase().contains("paulsCard") && row.toLowerCase().contains("matt"));
         }
-        ArrayList<String> paul = new ArrayList<String>();
+        ArrayList<String> paulsCard = new ArrayList<String>();
         ArrayList<String> matt = new ArrayList<String>();
         for (String row : rows) {
             if (row.toLowerCase().contains("matt")) {
                 matt.add(row);
-            } else if (row.toLowerCase().contains("paul")) {
-                paul.add(row);
+            } else if (row.toLowerCase().contains("paulsCard")) {
+                paulsCard.add(row);
             }
         }
 
         checkMattsRows(matt);
-        checkPaulsRows(paul);
+        checkpaulsCardsRows(paulsCard);
     }
 
     private void checkMattsRows(ArrayList<String> rows) {
@@ -372,8 +372,8 @@ public class PaymentCardTest {
         assertTrue(error + rows.get(2), rows.get(2).contains("72.8"));
     }
 
-    private void checkPaulsRows(ArrayList<String> rows) {
-        assertEquals("Paul's card's information should be printed 3 times: ", 3, rows.size());
+    private void checkpaulsCardsRows(ArrayList<String> rows) {
+        assertEquals("paulsCard's card's information should be printed 3 times: ", 3, rows.size());
 
         String error = "check that the print of your program is identical to the sample output. The following is printed ";
         assertTrue(error + rows.get(0), rows.get(0).contains("15.4"));

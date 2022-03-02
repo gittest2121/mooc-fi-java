@@ -13,9 +13,12 @@ public class DecreasingCounter {
     }
 
     public void decrement() {
-        // write the method implementation here
-        // the aim is to decrement the value of the counter by one
+        if (value > 0) {
+            --value;
+        }
     }
-
-    // the other methods go here
+    
+    public void reset() {
+        value = 0;
+    }
 }
